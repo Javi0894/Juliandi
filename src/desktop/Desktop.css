@@ -1,0 +1,70 @@
+@media only screen and (min-width: 600px) {
+    .App {
+      padding: 10px;
+      margin: 50px;
+      text-align: center;
+      height: 100vw;
+      width: 50vw;
+      background-image: radial-gradient(white, yellow);
+      border-radius: 10px;
+    }
+  
+    .Topbar
+    {
+      background-color: black;
+      height: 70px;
+      width: 100%; 
+      position: sticky;
+      top: 0px; left: 0px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+  
+    .icon
+    {
+      border-radius: 50%;
+      width: 40px;
+      height:40px;
+      margin: 10px;
+      transition: filter 0.3s linear;
+      cursor: pointer;
+    }
+  
+    .icon:hover
+    {
+      filter: brightness(2);
+    }
+  
+    .fit
+    {
+      object-fit: cover;
+    }
+  
+    .shadow {
+      box-shadow: 1px 10px 10px;
+    }
+  
+    .App-logo {
+      height: 40vmin;
+      pointer-events: none;
+    }
+  
+    section
+    {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+  
+    article
+    {
+      width: 40%;
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+}

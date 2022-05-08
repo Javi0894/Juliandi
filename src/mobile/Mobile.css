@@ -1,0 +1,38 @@
+@media only screen and (max-width: 600px) {
+
+    .portrait
+    {
+        width: 100%; 
+        object-fit: cover;
+        object-position: 0px 0px
+    }
+
+    .shadow 
+    {
+        box-shadow: 1px 10px 10px;
+    }
+
+    .App-logo 
+    {
+        height: 40vmin;
+        pointer-events: none;
+    }
+
+    section
+    {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+
+    article
+    {
+        width: 100%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
