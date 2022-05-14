@@ -4,8 +4,8 @@ import TopBar from '../utils/TopBar';
 
 import photo1 from '../utils/pictures/juliandi1.jpeg';
 import photo2 from '../utils/pictures/juliandi2.jpeg';
+import LoginForm from '../utils/Login';
 import './Mobile.css';
-import Confirmation from '../utils/Confirmation';
 
 export default function MobileApp()
 {
@@ -24,7 +24,7 @@ export default function MobileApp()
             <article>
                 Insert Text Here
             </article>
-            <Confirmation/>
+            <LoginForm/>
         </div>
     );
 }

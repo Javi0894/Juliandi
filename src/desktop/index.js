@@ -3,7 +3,7 @@ import TopBar from '../utils/TopBar';
 
 import photo1 from '../utils/pictures/juliandi1.jpeg';
 import photo2 from '../utils/pictures/juliandi2.jpeg';
-import Confirmation from '../utils/Confirmation';
+import LoginForm from '../utils/Login';
 
 import './Desktop.css';
 
@@ -42,7 +42,7 @@ export default function DesktopApp()
                     }}
                 />
                 </section>
-                <Confirmation/>
+                <LoginForm/>
             </div>
         </>
     );

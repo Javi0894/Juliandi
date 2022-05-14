@@ -25,6 +25,12 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: 20px;
+        background-color: yellow;
+    }
+
+    input
+    {
+        height: 100px;
     }
 
     article
