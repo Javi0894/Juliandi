@@ -1,6 +1,6 @@
-import React, {useContext, useState} from 'react';
+import React, {useContext, useState, useRef} from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Box, TextField, Button, FormLabel } from '@mui/material';
+import { Box, TextField, Button, FormLabel, Card } from '@mui/material';
 import LanguageBar from '../utils/TopBar';
 import { LanguageContext } from '../contexts';
 
@@ -9,6 +9,8 @@ export default function LoginRoute()
     const navigate = useNavigate();
     const deadline = new Date(2022, 5, 15);
     const {lanState} = useContext(LanguageContext);
+
+    const failure = useRef();
 
     const language = lanState[0];
     const [ credentials, setCredentials ] = useState(
@@ -19,9 +21,9 @@ export default function LoginRoute()
 
     const texts = 
     {
-        GER:['Glücklicher als je zuvor', 'Bestätigen Sie Ihre Anwesenheit vor'],
-        ESP:['Felices por siempre', 'Confirmar su asistencia antes del'],
-        ENG:['Happily ever after', 'Please confirm your assistance before']
+        GER:['Authentifizierung fehlgeschlagen','Glücklicher als je zuvor', 'Bestätigen Sie Ihre Anwesenheit vor'],
+        ESP:['Autentificación fallida', 'Felices por siempre', 'Confirmar su asistencia antes del'],
+        ENG:['Authentication failed','Happily ever after', 'Please confirm your assistance before']
     };
 
     const form =
@@ -50,6 +52,7 @@ export default function LoginRoute()
         }
         catch(err)
         {
+            failure.current.style.display = 'block';
             console.error(err);
         };
     };
@@ -99,6 +102,18 @@ export default function LoginRoute()
                 required
             />
             <LanguageBar/>
+            <Card ref={failure} style={{ 
+                position:'absolute',
+                top:0, 
+                left:0,
+                display:'none',
+                padding: 10, 
+                color: 'red',
+                backgroundColor:'rgba(255, 0, 0, 0.5)',    
+                width:200
+            }}>
+               {texts[language][0]} 
+            </Card>
             <Button variant="contained" type="submit">
                 {form[language][2]}
             </Button>
