@@ -12,20 +12,27 @@ export default function Confirmation()
     
     const language = lanState[0];
 
+    const titles = 
+    {
+        GER:['Hallo'],
+        ESP:['Hola'],
+        ENG:['Hello']
+    }
+
     const legends =
     {
         GER:[
-            'Kommen Sie mit Begleitung?', 
+            'Informieren Sie uns, ob Sie kommen',
             'Helfen Sie und mit Information',
             'Erfolgreich! Vielen Dank für Ihre Bestätigung!'
         ],
         ESP:[
-            'Vienen sus acompañantes?', 
+            'Infórmenos si es que van a asistir',
             'Ayúdenos con un poco de información', 
             'Exitoso! Muchas gracias por confirmar!'
         ],
         ENG:[
-            'What about your companion?', 
+            'Let us know if you are coming', 
             'Help us with some Information', 
             'Request successful! Thank you for your confirmation!'
         ]
@@ -34,7 +41,6 @@ export default function Confirmation()
     const inputs = 
     {
         GER:[
-            'Sind Sie dabei?',
             'Möchten Sie ein Hotelzimmer buchen?',
             'Allergien', 
             'Intoleranzen', 
@@ -42,7 +48,6 @@ export default function Confirmation()
             'Bestätigen'
         ],
         ESP:[
-            'Va a asistir',
             'Quisiera rentar un cuarto de hotel',
             'Alergias', 
             'Intolerancias', 
@@ -50,7 +55,6 @@ export default function Confirmation()
             'Confirmar'
         ],
         ENG:[
-            'Will you be attending?',
             'I would like to rent a hotel room',
             'Allergies', 
             'Intolerances', 
@@ -103,6 +107,17 @@ export default function Confirmation()
             noValidate
             autoComplete="off"
         >
+            <h2>
+                {titles[language][0]}&nbsp;
+                {
+                    [guest.name, ...Object.keys(guest.companion)].map((n, i) => {
+                        const str = (i===0?'':', ') + n.split(' ')[0];
+                        return (<span key={i}>{str}</span>);
+                    })
+                }
+                !
+            </h2>
+            <FormLabel component="legend">{legends[language][0]}</FormLabel>
             <FormControlLabel
                 style={{justifyContent: 'space-around'}}
                 control={
@@ -115,34 +130,28 @@ export default function Confirmation()
                         name="attending" 
                     />
                 }
-                label={inputs[language][0]}
+                label={ guest.name }
                 labelPlacement='start'
             />
             {
-                Object.keys(guest.companion).length > 0 && 
-                <>
-                    <FormLabel component="legend">{legends[language][0]}</FormLabel>  
-                    {
-                        Object.entries(guest.companion).map( (comp, i) => (
-                            <FormControlLabel 
-                                key={i}
-                                style={{justifyContent: 'space-around'}}
-                                control={
-                                    <Checkbox
-                                        sx={{ '& .MuiSvgIcon-root': { fontSize: 40 } }} 
-                                        onChange={handleCompanionAttending}
-                                        icon={<FavoriteBorder/>}
-                                        checkedIcon={<Favorite/>} 
-                                        checked={comp[1]} 
-                                        name={comp[0]}
-                                    />
-                                }
-                                label={comp[0]}
-                                labelPlacement='start'
+                Object.entries(guest.companion).map( (comp, i) => (
+                    <FormControlLabel 
+                        key={i}
+                        style={{justifyContent: 'space-around'}}
+                        control={
+                            <Checkbox
+                                sx={{ '& .MuiSvgIcon-root': { fontSize: 40 } }} 
+                                onChange={handleCompanionAttending}
+                                icon={<FavoriteBorder/>}
+                                checkedIcon={<Favorite/>} 
+                                checked={comp[1]} 
+                                name={comp[0]}
                             />
-                        ))
-                    }
-                </>
+                        }
+                        label={comp[0]}
+                        labelPlacement='start'
+                    />
+                ))
             }
             <FormLabel component="legend">{legends[language][1]}</FormLabel>
             <FormControlLabel
@@ -157,13 +166,13 @@ export default function Confirmation()
                         name="reservation" 
                     />
                 }
-                label={inputs[language][1]}
+                label={inputs[language][0]}
                 labelPlacement='start'
             />
-            <TextField fullWidth label={inputs[language][2]} name="allergies" onChange={handleMainText} value={guest.allergies}/>
-            <TextField fullWidth label={inputs[language][3]} name="intolerances" onChange={handleMainText} value={guest.intolerances}/>
-            <TextField fullWidth label={inputs[language][4]} name="others" onChange={handleMainText} value={guest.others}/>
-            <Button variant="contained" type="submit">{inputs[language][5]}</Button>
+            <TextField fullWidth label={inputs[language][1]} name="allergies" onChange={handleMainText} value={guest.allergies}/>
+            <TextField fullWidth label={inputs[language][2]} name="intolerances" onChange={handleMainText} value={guest.intolerances}/>
+            <TextField fullWidth label={inputs[language][3]} name="others" onChange={handleMainText} value={guest.others}/>
+            <Button variant="contained" type="submit">{inputs[language][4]}</Button>
             <Card ref={success} style={{ 
                 display:'none',
                 padding: 10, 
