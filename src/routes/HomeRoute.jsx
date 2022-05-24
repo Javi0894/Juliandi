@@ -2,8 +2,8 @@ import { useNavigate } from 'react-router-dom';
 import React, {useMemo, useState} from 'react';
 import Portrait from '../utils/Portrait';
 import LanguageBar from '../utils/TopBar';
-import photo1 from '../utils/pictures/juliandi1.jpeg';
-import photo2 from '../utils/pictures/juliandi2.jpeg';
+import photo1 from '../utils/pictures/JA3.jpg';
+import photo2 from '../utils/pictures/JA4.jpg';
 
 import '../desktop/Desktop.css';
 import '../mobile/Mobile.css';
@@ -30,11 +30,12 @@ export default function HomeRoute()
                 guest &&
                 <div className='App'>
                     <LanguageBar className='LanguageBar'/>
+                    <Portrait src={photo2} />
                     <section>
                         <Confirmation/>
                     </section>
                     <Portrait src={photo1} />
-                    <Portrait src={photo2} />
+                    
                 </div>
             }
         </UserContext.Provider>
