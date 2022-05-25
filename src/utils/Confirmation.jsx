@@ -1,7 +1,8 @@
 import React, { useContext, useRef } from 'react';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
-import { Box, Button, FormControlLabel, Checkbox, FormLabel, TextField, Card } from '@mui/material';
+import { Box, FormControlLabel, Checkbox, FormLabel, TextField, Card, Typography } from '@mui/material';
 import { UserContext, LanguageContext } from '../contexts';
+import { StyledButton } from '../styles';
 
 export default function Confirmation()
 {
@@ -94,7 +95,7 @@ export default function Confirmation()
             component="form"
             sx={{
                 position: 'relative',
-                backgroundColor:'yellow',
+                backgroundColor:'#D8F1FF',
                 padding: 3,
                 width: 'calc(100% - 50px)',
                 display:'flex',
@@ -107,22 +108,24 @@ export default function Confirmation()
             noValidate
             autoComplete="off"
         >
-            <h2>
-                {titles[language][0]}&nbsp;
-                {
-                    [guest.name, ...Object.keys(guest.companion)].map((n, i) => {
-                        const str = (i===0?'':', ') + n.split(' ')[0];
-                        return (<span key={i}>{str}</span>);
-                    })
-                }
-                !
-            </h2>
+            <Typography>
+                <h2>
+                    {titles[language][0]}&nbsp;
+                    {
+                        [guest.name, ...Object.keys(guest.companion)].map((n, i) => {
+                            const str = (i===0?'':', ') + n.split(' ')[0];
+                            return (<span key={i}>{str}</span>);
+                        })
+                    }
+                    !
+                </h2>
+            </Typography>
             <FormLabel component="legend">{legends[language][0]}</FormLabel>
             <FormControlLabel
                 style={{justifyContent: 'space-around'}}
                 control={
                     <Checkbox
-                        sx={{ '& .MuiSvgIcon-root': { fontSize: 40 } }} 
+                        sx={{ '& .MuiSvgIcon-root': { fontSize: 40, color:'#FF87FC' } }} 
                         icon={<FavoriteBorder/>}
                         checked={guest.attending}
                         checkedIcon={<Favorite/>} 
@@ -140,7 +143,7 @@ export default function Confirmation()
                         style={{justifyContent: 'space-around'}}
                         control={
                             <Checkbox
-                                sx={{ '& .MuiSvgIcon-root': { fontSize: 40 } }} 
+                                sx={{ '& .MuiSvgIcon-root': { fontSize: 40, color:'#FF87FC' } }} 
                                 onChange={handleCompanionAttending}
                                 icon={<FavoriteBorder/>}
                                 checkedIcon={<Favorite/>} 
@@ -158,7 +161,7 @@ export default function Confirmation()
                 style={{justifyContent: 'space-around'}}
                 control={
                     <Checkbox
-                        sx={{ '& .MuiSvgIcon-root': { fontSize: 40 } }} 
+                        sx={{ '& .MuiSvgIcon-root': { fontSize: 40, color:'#FF87FC' } }} 
                         icon={<FavoriteBorder/>}
                         checked={guest.reservation}
                         checkedIcon={<Favorite/>} 
@@ -172,7 +175,7 @@ export default function Confirmation()
             <TextField fullWidth label={inputs[language][1]} name="allergies" onChange={handleMainText} value={guest.allergies}/>
             <TextField fullWidth label={inputs[language][2]} name="intolerances" onChange={handleMainText} value={guest.intolerances}/>
             <TextField fullWidth label={inputs[language][3]} name="others" onChange={handleMainText} value={guest.others}/>
-            <Button variant="contained" type="submit">{inputs[language][4]}</Button>
+            <StyledButton variant="contained" type="submit">{inputs[language][4]}</StyledButton>
             <Card ref={success} style={{ 
                 display:'none',
                 padding: 10, 

@@ -9,6 +9,7 @@ import '../desktop/Desktop.css';
 import '../mobile/Mobile.css';
 import { UserContext } from '../contexts';
 import Confirmation from '../utils/Confirmation';
+import { JAThemeProvider } from '../styles';
 
 export default function HomeRoute()
 {
@@ -28,15 +29,16 @@ export default function HomeRoute()
         <UserContext.Provider value={{ guestState: [guest, setGuest] }}>
             { 
                 guest &&
-                <div className='App'>
-                    <LanguageBar className='LanguageBar'/>
-                    <Portrait src={photo2} />
-                    <section>
-                        <Confirmation/>
-                    </section>
-                    <Portrait src={photo1} />
-                    
-                </div>
+                <JAThemeProvider>
+                    <div className='App'>
+                        <LanguageBar className='LanguageBar'/>
+                        <Portrait src={photo1} />
+                        <section>
+                            <Confirmation/>
+                        </section>
+                        <Portrait src={photo2} /> 
+                    </div>
+                </JAThemeProvider>
             }
         </UserContext.Provider>
     );
