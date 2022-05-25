@@ -23,7 +23,7 @@ export default function LoginRoute()
     const texts = 
     {
         GER:['Authentifizierung fehlgeschlagen','bis zur Unendlichkeit und noch viel weiter'],
-        ESP:['Autentificación fallida', 'Al infinito y mas alla'],
+        ESP:['Autentificación fallida', 'Al infinito y más allá'],
         ENG:['Authentication failed','To infinity and beyond']
     };
 
