@@ -1,6 +1,6 @@
 import React, { useContext, useRef } from 'react';
 import { Favorite, FavoriteBorder } from '@mui/icons-material';
-import { Box, FormControlLabel, Checkbox, FormLabel, TextField, Card, Typography } from '@mui/material';
+import { Box, FormControlLabel, Checkbox, FormLabel, TextField, Card } from '@mui/material';
 import { UserContext, LanguageContext } from '../contexts';
 import { StyledButton } from '../styles';
 
@@ -12,13 +12,6 @@ export default function Confirmation()
     const [ guest, setGuest ] = guestState;
     
     const language = lanState[0];
-
-    const titles = 
-    {
-        GER:['Hallo'],
-        ESP:['Hola'],
-        ENG:['Hello']
-    }
 
     const legends =
     {
@@ -108,18 +101,6 @@ export default function Confirmation()
             noValidate
             autoComplete="off"
         >
-            <Typography>
-                <h2>
-                    {titles[language][0]}&nbsp;
-                    {
-                        [guest.name, ...Object.keys(guest.companion)].map((n, i) => {
-                            const str = (i===0?'':', ') + n.split(' ')[0];
-                            return (<span key={i}>{str}</span>);
-                        })
-                    }
-                    !
-                </h2>
-            </Typography>
             <FormLabel component="legend">{legends[language][0]}</FormLabel>
             <FormControlLabel
                 style={{justifyContent: 'space-around'}}

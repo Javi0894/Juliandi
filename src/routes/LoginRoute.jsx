@@ -66,6 +66,8 @@ export default function LoginRoute()
                 sx={{
                     position:'absolute',
                     left: 0,
+                    minWidth:600,
+                    minHeight:750,
                     height:'calc(100% - 10px)',
                     width: 'calc(100% - 20px)',
                     display:'flex',
@@ -82,7 +84,7 @@ export default function LoginRoute()
             >
                 <Typography><h1>Juli + Andi</h1></Typography>
                 <Typography><h2>{texts[language][1]}</h2></Typography>
-                <FormLabel component="legend">{deadline.toLocaleDateString()}</FormLabel>
+                <FormLabel component="legend">{deadline.toLocaleDateString().replace(/\//g, '.')}</FormLabel>
                 {/* <FormLabel component="legend">After the date the confirmations will be closed</FormLabel> */}
                 <TextField 
                     id="outlined-basic" 

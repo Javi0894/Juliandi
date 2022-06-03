@@ -10,6 +10,7 @@ import '../mobile/Mobile.css';
 import { UserContext } from '../contexts';
 import Confirmation from '../utils/Confirmation';
 import { JAThemeProvider } from '../styles';
+import Description from '../utils/Description';
 
 export default function HomeRoute()
 {
@@ -33,6 +34,9 @@ export default function HomeRoute()
                     <div className='App'>
                         <LanguageBar className='LanguageBar'/>
                         <Portrait src={photo1} />
+                        <section>
+                            <Description/>
+                        </section>
                         <section>
                             <Confirmation/>
                         </section>
