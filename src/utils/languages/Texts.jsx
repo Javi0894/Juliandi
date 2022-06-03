@@ -36,97 +36,88 @@ export default function useDynamicText()
     };
     const schedule = {
         GER:`
-        Tagesablauf\n
-        7:15\n
-        Treffpunkt: Stumpfstraße 2, 76131 Parkplatz Hauptfriedhof (nahe Hoepfner Burg)\n
-        7:30\n
-        Fahrt mit dem Hochzeitsbus\n
-        11:00\n
-        Trauung im Bibliothekssaal Kloster Wiblingen\n
-        12:00\n
-        Sektempfang im Klosterhof\n
-        14:00\n
-        Rückfahrt mit dem Partybus\n
-        16:00\n
-        Feier Hoepfner Burg (Schalander)\n
+        <h2>Tagesablauf</h2>
+        <p><b>7:15</b><br/>Treffpunkt: Stumpfstraße 2, 76131 Parkplatz Hauptfriedhof (nahe Hoepfner Burg)</p>
+        <p><b>7:30</b><br/>Fahrt mit dem Hochzeitsbus</p>
+        <p><b>11:00</b><br/>Trauung im Bibliothekssaal Kloster Wiblingen</p>
+        <p><b>12:00</b><br/>Sektempfang im Klosterhof</p>
+        <p><b>14:00</b><br/>Rückfahrt mit dem Partybus</p>
+        <p><b>16:00</b><br/>Feier Hoepfner Burg (Schalander)</p>
         Ihr wollt euch am Unterhaltungsprogramm beteiligen? Dann wendet euch mit euren Ideen gerne an
-        Nora (canjtara@gmail.com).\n
-        Hüllt euch in euren feinsten Zwirn!\n
-        Der Dresscode heißt „Elegant/Formal“.\n
-        Das bedeutet für die Frauen zum Beispiel: Langes elegantes Abendkleid.\n
-        Und für die Männer: Feiner Anzug mit Krawatte oder Fliege.`,
+        Nora (<b>canjtara@gmail.com</b>).<br/>
+        <h3>Hüllt euch in euren feinsten Zwirn!</h3>
+        Der Dresscode heißt „Elegant/Formal“.<br/>
+        <b>Das bedeutet für die Frauen zum Beispiel: Langes elegantes Abendkleid.<br/>
+        Und für die Männer: Feiner Anzug mit Krawatte oder Fliege.</b>`,
         ESP:`
-        Itinerario\n
-        7:15\n
-        Punto de encuentro: Stumpfstraße 2, 76131 Karlsruhe “Parkplatz Hauptfriedhof” (cerca de Hoepfner Burg)\n
-        7:30\n
-        Viaje con el bus de boda\n
-        11:00\n
-        Ceremonia en Biblioteca Kloster Wiblingen\n
-        12:00\n
-        Brindis\n
-        14:00\n
-        Regreso con bus fiestero\n
-        16:00\n
-        Fiesta Hoepfner Burg (Schalander)\n
+        <h2>Itinerario</h2>
+        <p><b>7:15</b><br/>Punto de encuentro: Stumpfstraße 2, 76131 Karlsruhe “Parkplatz Hauptfriedhof” (cerca de Hoepfner Burg)</p>
+        <p><b>7:30</b><br/>Viaje con el bus de boda</p>
+        <p><b>11:00</b><br/>Ceremonia en Biblioteca Kloster Wiblingen</p>
+        <p><b>12:00</b><br/>Brindis</p>
+        <p><b>14:00</b><br/>Regreso con bus fiestero</p>
+        <p><b>16:00</b><br/>Fiesta Hoepfner Burg (Schalander)</p>
         ¿Quieren hacer parte del programa de entretenimiento? Entonces pueden contactar con sus ideas a
-        Nora (canjtara@gmail.com).\n
-        Pónganse sus mejores prendas!\n
-        El Dresscode es „Elegante/formal“.\n
-        Eso significa para las mujeres, por ejemplo: vestido largo elegante.\n
-        Y para los hombres: Traje fino con corbata o corbatín.`,
+        Nora (<b>canjtara@gmail.com</b>).<br/>
+        <h3>Pónganse sus mejores prendas!</h3>
+        El Dresscode es „Elegante/formal“.<br/>
+        <b>Eso significa para las mujeres, por ejemplo: vestido largo elegante.<br/>
+        Y para los hombres: Traje fino con corbata o corbatín.</b>`,
         ENG:`
-        Itinerary\n
-        7:15\n
-        Meeting point: Stumpfstraße 2, 76131 Parkplatz Hauptfriedhof (near Hoepfner Burg)\n
-        7:30\n
-        Drive with the wedding bus\n
-        11:00\n
-        Ceremony in Library room Kloster Wiblingen\n
-        12:00\n
-        Toast and lunch\n
-        14:00\n
-        Drive with the party bus\n
-        16:00\n
-        Party Hoepfner Burg (Schalander)\n
+        <h2>Itinerary</h2>
+        <p><b>7:15</b><br/>Meeting point: Stumpfstraße 2, 76131 Parkplatz Hauptfriedhof (near Hoepfner Burg)</p>
+        <p><b>7:30</b><br/>Drive with the wedding bus</p>
+        <p><b>11:00</b><br/>Ceremony in Library room Kloster Wiblingen</p>
+        <p><b>12:00</b><br/>Toast and lunch</p>
+        <p><b>14:00</b><br/>Drive with the party bus</p>
+        <p><b>16:00</b><br/>Party Hoepfner Burg (Schalander)</p>
         Do you want to be part of the entertainment program? Then contact Nora with your ideas
-        (canjtara@gmail.com).\n
-        Put on your fanciest clothes!\n
-        The Dresscode is „Elegant/formal“.\n
-        That means for the women, for example: long elegant evening dress.\n
-        And for the men: fine suit with tie or bow tie.`
+        (<b>canjtara@gmail.com</b>).<br/>
+        <h3>Put on your fanciest clothes!</h3>
+        The Dresscode is „Elegant/formal“.<br/>
+        <b>That means for the women, for example: long elegant evening dress.<br/>
+        And for the men: fine suit with tie or bow tie.</b>`
     };
     const accomodation=
     {
-        GER:`Damit ihr die Feier in allen Zügen und mit allen Annehmlichkeiten genießen könnt, empfehlen wir
+        GER:`<p>Damit ihr die Feier in allen Zügen und mit allen Annehmlichkeiten genießen könnt, empfehlen wir
         ein komfortables Zimmer in der Hoepfner Burg selbst. So könnt ihr nachts beseelt die Treppen hoch
-        und ins Bett fallen.\n
+        und ins Bett fallen.<br/>
         Für unsere Hochzeit sind mehrere Zimmer bereits vorgemerkt. Trotzdem heißt es schnell sein, da nur
-        eine begrenzte Anzahl zur Verfügung steht.\n
-        Die Zimmer bucht ihr über reservierung@hoepfner-burghof.de mit dem Stichwort „Weber
+        eine begrenzte Anzahl zur Verfügung steht.<br/>
+        <b>Die Zimmer bucht ihr über reservierung@hoepfner-burghof.de mit dem Stichwort „Weber
         Hochzeit 30.07.22“. So bekommt ihr eins der vorgemerkten Zimmer und obendrauf noch eine
-        Vergünstigung.\n
-        Ihr habt ein Zimmer gebucht? Dann ist auch das gemeinsame Frühstück am nächsten Tag inklusive.`,
-        ESP:`Para poder disfrutar de la fiesta con todas las de la ley, les recomendamos tomar una habitación en
-        el mismo Hoepfner Burg. Así podrán subir las escaleras por la noche y caer en la cama.\n
-        Para nuestra boda tenemos un número limitado de habitaciones separadas.\n
-        La habitación la pueden reservar enviando un correo a reservierung@hoepfner-burghof.de con
-        el código “Weber Hochzeit 30.07.2022”, así les darán un descuento.\n
-        En la reserva está incluido el desayuno de la mañana siguiente.`,
-        ENG:`So that you can enjoy the celebration to the fullest and with all the amenities, we recommend a
+        Vergünstigung.</b><br/>
+        Ihr habt ein Zimmer gebucht? Dann ist auch das gemeinsame Frühstück am nächsten Tag inklusive.</p>`,
+        ESP:`<p>Para poder disfrutar de la fiesta con todas las de la ley, les recomendamos tomar una habitación en
+        el mismo Hoepfner Burg. Así podrán subir las escaleras por la noche y caer en la cama.<br/>
+        Para nuestra boda tenemos un número limitado de habitaciones separadas.<br/>
+        <b>La habitación la pueden reservar enviando un correo a reservierung@hoepfner-burghof.de con
+        el código “Weber Hochzeit 30.07.2022”, así les darán un descuento.</b><br/>
+        En la reserva está incluido el desayuno de la mañana siguiente.</p>`,
+        ENG:`<p>So that you can enjoy the celebration to the fullest and with all the amenities, we recommend a
         comfortable room in the Hoepfner Burg itself. That way you can climb the stairs at night and fall into
-        bed.\n
-        For our wedding we have some limited rooms separated.\n
-        To book the room you need to send an E-mail to reservierung@hoepfner-burghof.de and enter
-        the keyword &quot;Weber Hochzeit 30.07.22&quot; this way you will receive a special discount.\n
-        If you book a room, the breakfast next day is inclusive.`
+        bed.<br/>
+        For our wedding we have some limited rooms separated.<br/>
+        <b>To book the room you need to send an E-mail to reservierung@hoepfner-burghof.de and enter
+        the keyword &quot;Weber Hochzeit 30.07.22&quot; this way you will receive a special discount.</b><br/>
+        If you book a room, the breakfast next day is inclusive.</p>`
     };
     const gift=
     {
-        GER:`Dann war noch die Sache mit den Geschenken. Am liebsten wünschen wir uns eine finanzielle Unterstützung für unsere Flitterwochenkasse.`,
-        ESP:`Lluvia de sobres: Nos gustaría recibir una colaboración para nuestro fondo para la luna de miel.`,
-        ENG:`We would appreciate to receive financial support for our honeymoon fund.`
+        GER:`<h3>Dann war noch die Sache mit den Geschenken. Am liebsten wünschen wir uns eine finanzielle Unterstützung für unsere Flitterwochenkasse.</h3>`,
+        ESP:`<h3>Lluvia de sobres: Nos gustaría recibir una colaboración para nuestro fondo para la luna de miel.</h3>`,
+        ENG:`<h3>We would appreciate to receive financial support for our honeymoon fund.</h3>`
+    };
+    const deadline=
+    {
+        GER:`Bitte bestätigt uns euer Kommen bis zum 20.06.2022.\n
+        Klickt dazu einfach auf eure Herzen und bestätigt dies unten.`,
+        ESP:`Por favor confirmar su asistencia hasta el 20.06.2022.\n
+        Simplemente haciendo clic al corazón y confirmando en el botón de abajo.`,
+        ENG:`Please let us know if you are coming until 20.06.2022.\n
+        Just click on your hearts and confirm this below.`
     }
 
-    return [introduction[language], schedule[language], accomodation[language], gift[language]];
+    return [introduction[language], schedule[language], accomodation[language], gift[language], deadline[language]];
 }

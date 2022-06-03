@@ -5,7 +5,7 @@ import useDynamicText from './languages/Texts';
 
 export default function Description()
 {
-    const [intro, sched, accom, gift] = useDynamicText();
+    const [intro, sched, accom, gift, dead] = useDynamicText();
     const {lanState} = useContext(LanguageContext);
     const {guestState} = useContext(UserContext);
     const [ guest ] = guestState;
@@ -13,6 +13,7 @@ export default function Description()
     const schedRef = useRef();
     const accomRef = useRef();
     const giftRef = useRef();
+    const deadRef = useRef();
 
     const language = lanState[0];
 
@@ -26,11 +27,12 @@ export default function Description()
     useEffect(() => 
     {
         introRef.current.innerText = intro;
-        schedRef.current.innerText = sched;
-        accomRef.current.innerText = accom;
-        giftRef.current.innerText = gift;
+        schedRef.current.innerHTML = sched;
+        accomRef.current.innerHTML = accom;
+        giftRef.current.innerHTML = gift;
+        deadRef.current.innerText = dead;
 
-    }, [intro, accom, sched, gift]);
+    }, [intro, accom, sched, gift, dead]);
 
     return(
         <Box
@@ -64,6 +66,7 @@ export default function Description()
                 <div ref={schedRef}/>
                 <div ref={accomRef}/>
                 <div ref={giftRef}/>
+                <div style={{ fontWeight:'bold' }} ref={deadRef}/>
             </Typography>
         </Box>
     );
