@@ -46,7 +46,7 @@ export default function useDynamicText()
         <p><b>16:00</b><br/>Feier Hoepfner Burg (Schalander)</p>
         <p>Ihr wollt euch am Unterhaltungsprogramm beteiligen?</p><p> Bitte meldet Idee für Spiele und Beiträge bis zum 
         <b>09.07.2022</b>bei unserer Trauzeugin
-        Nora (<b>canjtara@gmail.com</b>).<br/> Ideen, die später eingereicht werden, können unter Umständen nicht berücksichtigt werden.</p>
+        Nora <br/>(<b>canjtara@gmail.com</b>).<br/> Ideen, die später eingereicht werden, können unter Umständen nicht berücksichtigt werden.</p>
         <h2 class="ja-title">Dresscode</h2>
         <p>Hüllt euch in euren feinsten Zwirn!</p>
         <p>Der Dresscode heißt „Elegant/Formal“.</p>
@@ -61,7 +61,7 @@ export default function useDynamicText()
         <p><b>12:00</b><br/>Brindis</p>
         <p><b>14:00</b><br/>Regreso con bus fiestero</p>
         <p><b>16:00</b><br/>Fiesta Hoepfner Burg (Schalander)</p>
-        <p>¿Quieren hacer parte del programa de entretenimiento?</p><p>Entonces pueden contactar con sus ideas a nuestra dama de honor Nora (<b>canjtara@gmail.com</b>)<br/>
+        <p>¿Quieren hacer parte del programa de entretenimiento?</p><p>Entonces pueden contactar con sus ideas a nuestra dama de honor Nora <br/>(<b>canjtara@gmail.com</b>)<br/>
         hasta el <b>09.07.2022</b>. Para que podamos planear un curso tranquilo de la celebración, las ideas enviadas después no podrán ser consideradas.</p>
         <h2 class="ja-title">Dresscode</h2>
         <p>Pónganse sus mejores prendas!</p>
@@ -78,7 +78,7 @@ export default function useDynamicText()
         <p><b>14:00</b><br/>Drive with the party bus</p>
         <p><b>16:00</b><br/>Party Hoepfner Burg (Schalander)</p>
         <p>Do you want to be part of the entertainment program?</p><p>Then contact our maid of honor Nora 
-        (<b>canjtara@gmail.com</b>)<br/>with your ideas until the <b>09.07.2022</b>, so that we can plan a smooth course for the celebration.<br/>
+        <br/>(<b>canjtara@gmail.com</b>)<br/>with your ideas until the <b>09.07.2022</b>, so that we can plan a smooth course for the celebration.<br/>
         Ideas submitted later may not be considered.
         </p>
         <h2 class="ja-title">Dresscode</h2>
