@@ -73,12 +73,12 @@ export default function useDynamicText()
         <h2 class="ja-title">Itinerary</h2>
         <p><b>7:15</b><br/>Meeting point: Stumpfstraße 2, 76131 Parkplatz Hauptfriedhof (near Hoepfner Burg)</p>
         <p><b>7:30</b><br/>Drive with the wedding bus</p>
-        <p><b>11:00</b><br/>Ceremony in Library room Kloster Wiblingen</p>
+        <p><b>11:00</b><br/>Ceremony in Library Kloster Wiblingen</p>
         <p><b>12:00</b><br/>Toast and lunch</p>
         <p><b>14:00</b><br/>Drive with the party bus</p>
         <p><b>16:00</b><br/>Party Hoepfner Burg (Schalander)</p>
         <p>Do you want to be part of the entertainment program?</p><p>Then contact our maid of honor Nora 
-        (<b>canjtara@gmail.com</b>)with your ideas until the <b>09.07.2022</b>, so that we can plan a smooth course for the celebration.<br/>
+        (<b>canjtara@gmail.com</b>) with your ideas until the <b>09.07.2022</b>, so that we can plan a smooth course for the celebration.<br/>
         Ideas submitted later may not be considered.
         </p>
         <h2 class="ja-title">Dresscode</h2>
