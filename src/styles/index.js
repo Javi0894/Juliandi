@@ -29,7 +29,7 @@ export const StyledButton = styled(Button)(
 const theme = createTheme({
     typography: { 
         fontSize: 20,
-        fontFamily: ['"Dancing Script"', 'cursive'].join(',')
+        fontFamily: ['"Montserrat"', 'cursive'].join(',')
     }
 });
 

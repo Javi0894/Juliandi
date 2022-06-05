@@ -1,4 +1,4 @@
-import React, {useContext, useState, useRef} from 'react';
+import React, {useContext, useState, useRef, useEffect} from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Box, TextField, FormLabel, Card, Typography } from '@mui/material';
 import LanguageBar from '../utils/TopBar';
@@ -12,6 +12,7 @@ export default function LoginRoute()
     const {lanState} = useContext(LanguageContext);
 
     const failure = useRef();
+    const date = useRef();
 
     const language = lanState[0];
     const [ credentials, setCredentials ] = useState(
@@ -58,6 +59,12 @@ export default function LoginRoute()
         };
     };
 
+    useEffect(() => 
+    {
+        const [year, month, day] = [deadline.getFullYear(), deadline.getMonth() + 1, deadline.getDate()]
+        date.current.innerText = `${day}.${month.toString().padStart(2, '0')}.${year}`;
+    }, [])
+
     return (
         <JAThemeProvider>
             <Box
@@ -66,10 +73,10 @@ export default function LoginRoute()
                 sx={{
                     position:'absolute',
                     left: 0,
-                    minWidth:600,
-                    minHeight:750,
-                    height:'calc(100% - 10px)',
-                    width: 'calc(100% - 20px)',
+                    // minWidth:'30ch',
+                    // minHeight:750,
+                    height:'100%',
+                    width: '100%',
                     display:'flex',
                     flexDirection: 'column',
                     justifyContent: 'space-evenly',
@@ -77,14 +84,15 @@ export default function LoginRoute()
                     textAlign: 'center',
                     backgroundImage:'radial-gradient(white, #D8F1FF)',
                     padding: 1,
-                    '& > :not(style)': { m: 1, width: '25ch' },
+                    // 'h1': { m:1, width: '30ch'},
+                    '& > :not(style)': { m: 1, width: '29ch' },
                 }}
                 noValidate
                 autoComplete="off"
             >
-                <Typography><h1>Juli + Andi</h1></Typography>
-                <Typography><h2>{texts[language][1]}</h2></Typography>
-                <FormLabel component="legend">{deadline.toLocaleDateString().replace(/\//g, '.')}</FormLabel>
+                <Typography><h1 className="ja-title">Juliana &amp; Andreas</h1></Typography>
+                <Typography><h2 className="ja-title">{texts[language][1]}</h2></Typography>
+                <FormLabel component="legend"><span className='ja-title' ref={date}/></FormLabel>
                 {/* <FormLabel component="legend">After the date the confirmations will be closed</FormLabel> */}
                 <TextField 
                     id="outlined-basic" 

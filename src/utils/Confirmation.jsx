@@ -16,29 +16,30 @@ export default function Confirmation()
     const legends =
     {
         GER:[
-            'Informieren Sie uns, ob Sie kommen',
-            'Helfen Sie und mit Information',
-            'Erfolgreich! Vielen Dank für Ihre Bestätigung!'
+            '',
+            'Helft uns noch mit ein paar Informationen',
+            'Danke für deine Rückmeldung!'
+
         ],
         ESP:[
-            'Infórmenos si es que van a asistir',
+            '',
             'Ayúdenos con un poco de información', 
-            'Exitoso! Muchas gracias por confirmar!'
+            'Gracias por su respuesta!'
         ],
         ENG:[
-            'Let us know if you are coming', 
+            '', 
             'Help us with some Information', 
-            'Request successful! Thank you for your confirmation!'
+            'Thank you for your answer!'
         ]
     };
 
     const inputs = 
     {
         GER:[
-            'Möchten Sie ein Hotelzimmer buchen?',
+            'Ihr bucht ein Hotelzimmer?',
             'Allergien', 
             'Intoleranzen', 
-            'Sonstiges ( Vegan, Vegerarier, ...etc)', 
+            'Sonstiges ( Vegan, Vegetarier, ...etc)', 
             'Bestätigen'
         ],
         ESP:[
@@ -72,14 +73,28 @@ export default function Confirmation()
 
     const handleAttendingSubmit = async (e) => {
         e.preventDefault();
-        document.body.classList.add('wait');
-        document.body.style.cursor = 'wait';
-        await fetch('https://juliandi.azurewebsites.net/api/attending/', 
-            { headers: { 'ja-token': localStorage.getItem('ja-token') }, method:'POST', body: JSON.stringify(guest) }
-        );
-        success.current.style.display = "block";
-        document.body.style.cursor = 'auto';
-        document.body.classList.remove('wait');
+        try
+        {
+            success.current.style.display = "none";
+            document.body.classList.add('wait');
+            document.body.style.cursor = 'wait';
+            const resp = await fetch('https://juliandi.azurewebsites.net/api/attending/', 
+                { headers: { 'ja-token': localStorage.getItem('ja-token') }, method:'POST', body: JSON.stringify(guest) }
+            );
+
+            if (resp.status !== 200) throw new Error(`Status failed with code ${resp.status}`);
+            success.current.style.color = 'green';
+            success.current.style.backgroundColor = 'rgba(0,255,0,0.5)';
+            success.current.style.display = "block";
+            document.body.style.cursor = 'auto';
+            document.body.classList.remove('wait');
+        }
+        catch(err)
+        {
+            success.current.style.color = 'red';
+            success.current.style.backgroundColor = 'rgba(255,0,0,0.5)';
+            success.current.innerText = err.message;
+        }
     };
 
     return (
@@ -88,6 +103,7 @@ export default function Confirmation()
             component="form"
             sx={{
                 position: 'relative',
+                // backdropFilter:'blur(20px)',
                 backgroundColor:'#D8F1FF',
                 padding: 3,
                 width: 'calc(100% - 50px)',
@@ -96,7 +112,7 @@ export default function Confirmation()
                 justifyContent:'space-around',
                 alignItems: 'center',
                 textAlign: 'center',
-                '& > :not(style)': { m: 1, width: '25ch' },
+                '& > :not(style)': { m: 1, width: '100%' },
             }}
             noValidate
             autoComplete="off"
@@ -158,7 +174,7 @@ export default function Confirmation()
             <TextField fullWidth label={inputs[language][3]} name="others" onChange={handleMainText} value={guest.others}/>
             <StyledButton variant="contained" type="submit">{inputs[language][4]}</StyledButton>
             <Card ref={success} style={{ 
-                display:'none',
+                display:guest.answered?'block':'none',
                 padding: 10, 
                 color: 'green',
                 backgroundColor:'rgba(0, 255, 0, 0.5)',    

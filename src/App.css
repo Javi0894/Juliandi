@@ -10,6 +10,11 @@
     align-items: center;
 }
 
+.ja-title
+{
+    font-family: 'Parisienne', cursive;
+}
+
 .icon
 {
     border-radius: 50%;
@@ -29,3 +34,4 @@
 {
     object-fit: cover;
 }
+

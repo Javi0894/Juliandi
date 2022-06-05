@@ -32,15 +32,20 @@ export default function HomeRoute()
                 guest &&
                 <JAThemeProvider>
                     <div className='App'>
-                        <LanguageBar className='LanguageBar'/>
-                        <Portrait src={photo1} />
+                        <LanguageBar className='LanguageBar' style={{backgroundColor: '#D8F1FF'}}/>
+                        <section>
+                            <Portrait src={photo1} />
+                        </section>
                         <section>
                             <Description/>
                         </section>
                         <section>
                             <Confirmation/>
                         </section>
-                        <Portrait src={photo2} /> 
+                        <section>
+                            <Portrait src={photo2} />
+                        </section>
+                         
                     </div>
                 </JAThemeProvider>
             }

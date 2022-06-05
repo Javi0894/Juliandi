@@ -9,6 +9,7 @@ export default function Description()
     const {lanState} = useContext(LanguageContext);
     const {guestState} = useContext(UserContext);
     const [ guest ] = guestState;
+
     const introRef = useRef();
     const schedRef = useRef();
     const accomRef = useRef();
@@ -26,11 +27,11 @@ export default function Description()
 
     useEffect(() => 
     {
-        introRef.current.innerText = intro;
+        introRef.current.innerHTML = intro;
         schedRef.current.innerHTML = sched;
         accomRef.current.innerHTML = accom;
         giftRef.current.innerHTML = gift;
-        deadRef.current.innerText = dead;
+        deadRef.current.innerHTML = dead;
 
     }, [intro, accom, sched, gift, dead]);
 
@@ -48,11 +49,11 @@ export default function Description()
                 alignItems: 'center',
                 textAlign: 'center',
                 zIndex:0,
-                '& > :not(style)': { m: 1, width: '25ch' },
+                '& > :not(style)': { m: 1, width: '100%' },
             }}
         >
             <Typography>
-                <h2>
+                <h2 className='ja-title'>
                     {titles[language][0]}&nbsp;
                     {
                         [guest.name, ...Object.keys(guest.companion)].map((n, i) => {
@@ -66,7 +67,7 @@ export default function Description()
                 <div ref={schedRef}/>
                 <div ref={accomRef}/>
                 <div ref={giftRef}/>
-                <div style={{ fontWeight:'bold' }} ref={deadRef}/>
+                <div ref={deadRef}/>
             </Typography>
         </Box>
     );

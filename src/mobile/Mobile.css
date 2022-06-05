@@ -33,11 +33,11 @@
 
     section
     {
+        max-width: 600px;
         width: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-bottom: 20px;
         background-color: #D8F1FF;
         z-index: -1;
     }
