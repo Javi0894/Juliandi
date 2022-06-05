@@ -94,22 +94,22 @@ export default function useDynamicText()
         und ins Bett fallen.</p>
         <p>Für unsere Hochzeit sind mehrere Zimmer bereits vorgemerkt.</p><p>Trotzdem heißt es schnell sein, da nur
         eine begrenzte Anzahl zur Verfügung steht.</p>
-        <p>Die Zimmer bucht ihr über <br/><b>reservierung@hoepfner-burghof.de</b></br> mit dem Stichwort <b>„Weber
-        Hochzeit 30.07.22“</b>. So bekommt ihr eins der vorgemerkten Zimmer und obendrauf noch eine
+        <p>Die Zimmer bucht ihr über <br/><b>reservierung@hoepfner-burghof.de</b></br> mit dem Stichwort <br/>„<b>Weber
+        Hochzeit 30.07.22</b>“<br/>. So bekommt ihr eins der vorgemerkten Zimmer und obendrauf noch eine
         Vergünstigung.</p>
         <p>Ihr habt ein Zimmer gebucht?</br> Dann ist auch das gemeinsame Frühstück am nächsten Tag inklusive.</p>`,
         ESP:`<h2 class="ja-title">Alojamiento</h2><p>Para poder disfrutar de la fiesta con todas las de la ley, les recomendamos tomar una habitación en
         el mismo Hoepfner Burg.</p><p>Así podrán subir las escaleras por la noche y caer en la cama.</p>
         <p>Para nuestra boda tenemos un número limitado de habitaciones separadas.</p>
         <p>La habitación la pueden reservar enviando un correo a <br/><b>reservierung@hoepfner-burghof.de</b><br/>con
-        el código “<b>Weber Hochzeit 30.07.2022</b>”, así les darán un descuento.</p>
+        el código <br/>„<b>Weber Hochzeit 30.07.2022</b>”<br/>Así les darán un descuento.</p>
         <p>En la reserva está incluido el desayuno de la mañana siguiente.</p>`,
         ENG:`<h2 class="ja-title">Accomodation</h2><p>So that you can enjoy the celebration to the fullest and with all the amenities, we recommend a
         comfortable room in the Hoepfner Burg itself.</p><p>That way you can climb the stairs at night and fall into
         bed.</p>
         <p>For our wedding we have some limited rooms separated.</p>
         <p>To book the room you need to send an E-mail to <br/><b>reservierung@hoepfner-burghof.de</b><br/> and enter
-        the keyword &quot;Weber Hochzeit 30.07.22&quot; this way you will receive a special discount.</p>
+        the keyword <br/>„<b>Weber Hochzeit 30.07.22</b>“<br/>this way you will receive a special discount.</p>
         <p>If you book a room, the breakfast next day is inclusive.</p>`
     };
     const gift=
