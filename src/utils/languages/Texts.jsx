@@ -45,7 +45,7 @@ export default function useDynamicText()
         <p><b>14:00</b><br/>Rückfahrt mit dem Partybus</p>
         <p><b>16:00</b><br/>Feier Hoepfner Burg (Schalander)</p>
         <p>Ihr wollt euch am Unterhaltungsprogramm beteiligen?</p><p> Bitte meldet Idee für Spiele und Beiträge bis zum 
-        <b>09.07.2022</b>bei unserer Trauzeugin
+        <b>09.07.2022</b> bei unserer Trauzeugin
         Nora <br/>(<b>canjtara@gmail.com</b>).<br/> Ideen, die später eingereicht werden, können unter Umständen nicht berücksichtigt werden.</p>
         <h2 class="ja-title">Dresscode</h2>
         <p>Hüllt euch in euren feinsten Zwirn!</p>
