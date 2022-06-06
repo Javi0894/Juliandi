@@ -16,7 +16,7 @@ export default function useDynamicText()
         <p>Wir freuen uns sehr, mit euch diesen besonderen Tag zu verbringen!</p>
         Die wichtigen Details lest ihr hier…`,
         ESP: `<p>¡Se acerca la boda del año!</p>
-        <p>Más de 5 años hemos caminado esta vida juntos como pareja.</p><p>Los últimos pasos hasta darnos el Sí
+        <p>Hemos caminado en esta vida más de cinco años juntos como pareja.</p><p>Los últimos pasos hasta darnos el Sí
         los caminaremos junto con ustedes.</p><p>Después celebraremos en un castillo con cerveza alemana y
         pasión colombiana.</p>
         <p>Viajaremos todos en nuestro bus de boda a las 07:30 am hacia la ceremonia en una hermosa
@@ -62,7 +62,7 @@ export default function useDynamicText()
         <p><b>14:00</b><br/>Regreso con bus fiestero</p>
         <p><b>16:00</b><br/>Fiesta Hoepfner Burg (Schalander)</p>
         <p>¿Quieren hacer parte del programa de entretenimiento?</p><p>Entonces pueden contactar con sus ideas a nuestra dama de honor Nora <br/>(<b>canjtara@gmail.com</b>)<br/>
-        hasta el <b>09.07.2022</b>. Para que podamos planear un curso tranquilo de la celebración, las ideas enviadas después no podrán ser consideradas.</p>
+        hasta el <b>09.07.2022</b>. Las ideas enviadas después no podrán ser consideradas.</p>
         <h2 class="ja-title">Dresscode</h2>
         <p>Pónganse sus mejores prendas!</p>
         <p>El Dresscode es „Elegante/formal“.</p>
