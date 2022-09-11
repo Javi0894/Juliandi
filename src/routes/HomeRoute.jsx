@@ -39,9 +39,9 @@ export default function HomeRoute()
                         <section>
                             <Description/>
                         </section>
-                        {/* <section>
+                        <section>
                             <Confirmation/>
-                        </section> */}
+                        </section>
                         <section>
                             <Portrait src={photo2} />
                         </section>
